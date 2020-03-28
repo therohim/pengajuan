@@ -5,14 +5,21 @@ import android.graphics.Color;
 
 import com.kinda.alert.KAlertDialog;
 
-public class AlertDialog {
+public class Alerty {
     public static final int PROGRESS_DIALOG =1;
+    public static final int PROGRESS_DIALOG_CONFIRM =11;
     public static final int SUCCESS_DIALOG =2;
     public static final int ERROR_DIALOG = 3;
     public static final int WARNING_DIALOG = 4;
     private static KAlertDialog mProgressDialog;
-    public AlertDialog(Context context, int type, String message){
-        if(type == PROGRESS_DIALOG){
+    public Alerty(Context context, int type, String message){
+        if(type == PROGRESS_DIALOG) {
+            mProgressDialog = new KAlertDialog(context, KAlertDialog.PROGRESS_TYPE);
+            mProgressDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
+            mProgressDialog.setTitleText("Loading");
+            mProgressDialog.setCancelable(false);
+            mProgressDialog.show();
+        }else if(type == PROGRESS_DIALOG_CONFIRM){
             mProgressDialog = new KAlertDialog(context, KAlertDialog.PROGRESS_TYPE);
             mProgressDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
             mProgressDialog.setTitleText("Loading");
@@ -24,7 +31,7 @@ public class AlertDialog {
             mProgressDialog.setContentText(message);
             mProgressDialog.show();
         }else if(type == ERROR_DIALOG){
-            mProgressDialog =new KAlertDialog(context, KAlertDialog.SUCCESS_TYPE);
+            mProgressDialog =new KAlertDialog(context, KAlertDialog.ERROR_TYPE);
             mProgressDialog.setTitleText("Ooops..");
             mProgressDialog.setContentText(message);
             mProgressDialog.show();

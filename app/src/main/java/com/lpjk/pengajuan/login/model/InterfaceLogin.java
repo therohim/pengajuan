@@ -1,4 +1,4 @@
-package org.pindaiaja.pindaiapp.login.model;
+package com.lpjk.pengajuan.login.model;
 
 public interface InterfaceLogin {
     String getUsername();

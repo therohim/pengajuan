@@ -1,2 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="headerTextSize">28sp</dimen>
+    <dimen name="padding_tiny">2dp</dimen>
+    <dimen name="padding_small">4dp</dimen>
+    <dimen name="padding_mid">6dp</dimen>
+    <dimen name="padding_default">8dp</dimen>
+    <dimen name="padding_dex">10dp</dimen>
+    <dimen name="padding_medium">12dp</dimen>
+    <dimen name="padding_big">16dp</dimen>
+    <dimen name="padding_super">24dp</dimen>
+    <dimen name="line">0.75dp</dimen>
+    <dimen name="line_default">1dp</dimen>
+    <dimen name="line_custom">4dp</dimen>
+    <dimen name="menu_height">110dp</dimen>
+    <dimen name="text_menu">16sp</dimen>
+    <dimen name="text_medium">16sp</dimen>
+    <dimen name="text_tiny">11sp</dimen>
+    <dimen name="text_small">13sp</dimen>
+    <dimen name="text_title">24sp</dimen>
+    <dimen name="text_normal">14sp</dimen>
+    <dimen name="text_big">16sp</dimen>
+    <dimen name="text_20">20sp</dimen>
+    <dimen name="icon_size_big">30dp</dimen>
+    <dimen name="icon_size">24dp</dimen>
+    <dimen name="icon_size1">20dp</dimen>
+    <dimen name="icon_size4">18dp</dimen>
+    <dimen name="icon_size2">14dp</dimen>
+    <dimen name="icon_size3">12dp</dimen>
+    <dimen name="menu_size">4dp</dimen>
+    <dimen name="default_corner">4dp</dimen>
+    <dimen name="default_login_corner">8dp</dimen>
+    <dimen name="image_height">200dp</dimen>
+</resources>

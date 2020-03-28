@@ -63,39 +63,41 @@ public class VolleyRequest {
                             e.printStackTrace();
                         }
                     }
-                }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                if (error instanceof NoConnectionError) {
-                    listener.onFetchFailure("Network Connectivity Problem");
-                } else if (error.networkResponse != null && error.networkResponse.data != null) {
-                    VolleyError volley_error = new VolleyError(new String(error.networkResponse.data));
-                    String errorMessage      = "";
-                    try {
-                        JSONObject errorJson = new JSONObject(volley_error.getMessage().toString());
-                        if(errorJson.has("error")) errorMessage = errorJson.getString("error");
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        if (error instanceof NoConnectionError) {
+                            listener.onFetchFailure("Network Connectivity Problem");
+                        } else if (error.networkResponse != null && error.networkResponse.data != null) {
+                            VolleyError volley_error = new VolleyError(new String(error.networkResponse.data));
+                            String errorMessage      = "";
+                            try {
+                                JSONObject errorJson = new JSONObject(volley_error.getMessage().toString());
+                                if(errorJson.has("error")) errorMessage = errorJson.getString("error");
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
 
-                    if (errorMessage.isEmpty()) {
-                        errorMessage = volley_error.getMessage();
-                    }
+                            if (errorMessage.isEmpty()) {
+                                errorMessage = volley_error.getMessage();
+                            }
 
-                    if (listener != null) listener.onFetchFailure(errorMessage);
-                } else {
-                    listener.onFetchFailure("Something went wrong. Please try again later");
+                            if (listener != null) listener.onFetchFailure(errorMessage);
+                        } else {
+                            listener.onFetchFailure("Something went wrong. Please try again later");
+                        }
+
+                    }
                 }
-
-            }
-        }){
+            ){
             // Request Header
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 Map<String, String> params = new HashMap<String, String>();
                 params.put("Content-Type", "application/json");
-                params.put("Client-Service", "frontend-client");
-                params.put("Auth-Key", "gmedia-tv");
+                params.put("Client-Service", "lpjk");
+                params.put("Auth-Key", "rohim");
                 params.put("User-Id", token1);
                 params.put("Timestamp", token2);
                 params.put("Signature", token3);

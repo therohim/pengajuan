@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.view.LayoutInflater;
@@ -19,6 +20,8 @@ import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
+import com.kinda.alert.KAlertDialog;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -26,7 +29,7 @@ public class RequestQueueService {
     private static RequestQueueService mInstance;
     private RequestQueue mRequestQueue;
     private static Context mCtx;
-    private static Dialog mProgressDialog;
+    private static KAlertDialog mProgressDialog;
 
     private RequestQueueService(Context context) {
         mCtx = context;
@@ -90,47 +93,49 @@ public class RequestQueueService {
         });
     }
 
-    public static void showAlertError(String message, final FragmentActivity context) {
+    public static void showAlertError(String message, final Context context) {
         try {
-            LayoutInflater inflater = LayoutInflater.from(context); // 1
-            View v = inflater.inflate(R.layout.dialog_error, null);
-            TextView tvMessage = v.findViewById(R.id.tv_message);
-            Button btnOk = v.findViewById(R.id.buttonOk);
-            tvMessage.setText(message);
-            AlertDialog.Builder builder = new AlertDialog.Builder(context);
-            builder.setView(v);
-            builder.setCancelable(false);
-            final AlertDialog alertDialog = builder.create();
-            alertDialog.show();
-            btnOk.setOnClickListener(new View.OnClickListener() {
+            mProgressDialog = new KAlertDialog(context, KAlertDialog.ERROR_TYPE);
+            mProgressDialog.setTitleText("Ooopssss....");
+            mProgressDialog.setContentText(message);
+            mProgressDialog.setConfirmClickListener(new KAlertDialog.OnSweetClickListener() {
                 @Override
-                public void onClick(View view) {
-                    alertDialog.dismiss();
+                public void onClick(KAlertDialog kAlertDialog) {
+                    mProgressDialog.dismiss();
                 }
             });
+            mProgressDialog.show();
+//            LayoutInflater inflater = LayoutInflater.from(context); // 1
+//            View v = inflater.inflate(R.layout.dialog_error, null);
+//            TextView tvMessage = v.findViewById(R.id.tv_message);
+//            Button btnOk = v.findViewById(R.id.buttonOk);
+//            tvMessage.setText(message);
+//            AlertDialog.Builder builder = new AlertDialog.Builder(context);
+//            builder.setView(v);
+//            builder.setCancelable(false);
+//            final AlertDialog alertDialog = builder.create();
+//            alertDialog.show();
+//            btnOk.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    alertDialog.dismiss();
+//                }
+//            });
         }catch (Exception e){
             e.printStackTrace();
         }
     }
 
     //Start showing progress
-    public static void showProgressDialog(final Activity activity) {
-        activity.runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                if (mProgressDialog != null) {
-                    if (mProgressDialog.isShowing() == true) cancelProgressDialog();
-                }
-
-                mProgressDialog = new Dialog(activity);
-                mProgressDialog.getWindow().requestFeature(Window.FEATURE_NO_TITLE);
-                mProgressDialog.setContentView(R.layout.progress_indicator);
-                mProgressDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                mProgressDialog.show();
-                mProgressDialog.setCancelable(false);
-            }
-        });
-
+    public static void showProgressDialog(final Context activity) {
+        if (mProgressDialog != null) {
+            if (mProgressDialog.isShowing()) cancelProgressDialog();
+        }
+        mProgressDialog = new KAlertDialog(activity, KAlertDialog.PROGRESS_TYPE);
+        mProgressDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
+        mProgressDialog.setTitleText("Loading");
+        mProgressDialog.setCancelable(false);
+        mProgressDialog.show();
     }
 
     //Stop showing progress

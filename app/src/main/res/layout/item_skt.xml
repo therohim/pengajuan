@@ -9,28 +9,53 @@
     android:paddingTop="@dimen/_4sdp"
     android:paddingBottom="@dimen/_4sdp"
     android:background="@drawable/border">
-    <androidx.appcompat.widget.AppCompatTextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="NPWP"
-        android:layout_marginTop="@dimen/_2sdp"
-        android:textSize="@dimen/_10sdp"
-        android:id="@+id/tv_npwp"/>
-    <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_nama"
-        android:text="Rohim mantap"
-        android:layout_marginTop="@dimen/_2sdp"
-        android:textStyle="bold"
-        android:textSize="@dimen/_13sdp"/>
-    <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_alamat"
-        android:textStyle="normal"
-        android:layout_marginTop="@dimen/_2sdp"
-        android:text="Tegalarum RT 05/04 Mranggen demak"/>
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_nama"
+                android:text="Rohim mantap"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:textStyle="bold"
+                android:textSize="@dimen/_13sdp"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_alamat"
+                android:textStyle="normal"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:text="Tegalarum RT 05/04 Mranggen demak"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_jk"
+                android:textStyle="normal"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:text="Laki Laki"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                android:id="@+id/tv_tipe"
+                android:text="SKT"/>
+        </LinearLayout>
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -1,4 +1,4 @@
-package org.pindaiaja.pindaiapp.login.model;
+package com.lpjk.pengajuan.login.model;
 
 import android.text.TextUtils;
 
@@ -24,8 +24,6 @@ public class Login implements  InterfaceLogin{
     public int isValidData() {
         if(TextUtils.isEmpty(getUsername())) {
             return 0;
-//        } else if(getPassword().length() <= 6) {
-//            return 1;
         } else {
             return -1;
         }

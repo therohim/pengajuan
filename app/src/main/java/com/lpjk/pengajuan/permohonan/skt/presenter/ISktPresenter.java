@@ -1,5 +1,5 @@
-package com.lpjk.pengajuan.permohonan.sbu.presenter;
+package com.lpjk.pengajuan.permohonan.skt.presenter;
 
-public interface ISbuPresenter {
-    void getSbu();
+public interface ISktPresenter {
+    void getSkt();
 }

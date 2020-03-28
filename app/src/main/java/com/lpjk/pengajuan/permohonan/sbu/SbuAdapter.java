@@ -1,7 +1,6 @@
 package com.lpjk.pengajuan.permohonan.sbu;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,24 +19,24 @@ import com.lpjk.pengajuan.permohonan.sbu.model.SbuModel;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AdapterSbu extends RecyclerView.Adapter<AdapterSbu.ViewHolder> {
+public class SbuAdapter extends RecyclerView.Adapter<SbuAdapter.ViewHolder> {
     private List<SbuModel> models = new ArrayList<>();
     private Activity context;
 
-    public AdapterSbu(Activity context, List<SbuModel> models){
+    public SbuAdapter(Activity context, List<SbuModel> models){
         this.models = models;
         this.context = context;
     }
 
     @NonNull
     @Override
-    public AdapterSbu.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public SbuAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_sbu,parent, false);
         return new ViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull AdapterSbu.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull SbuAdapter.ViewHolder holder, int position) {
         final SbuModel dt = models.get(position);
         holder.tvNpwp.setText(dt.getNpwp());
         holder.tvNama.setText(dt.getNama());

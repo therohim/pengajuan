@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -23,7 +24,7 @@
                 android:layout_height="match_parent"/>
 
             <ImageView
-                android:id="@+id/img_refresssh"
+                android:id="@+id/img_refresh"
                 android:layout_width="34dp"
                 android:layout_height="34dp"
                 android:src="@drawable/ic_refresh_gray"
@@ -47,15 +48,66 @@
             android:textSize="@dimen/text_big"
             android:textColor="#2F799B"
             android:layout_marginBottom="5dp"/>
-
-        <Button
-            android:id="@+id/btn_simpan"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="@dimen/_190sdp"
             android:layout_height="wrap_content"
-            android:text="Simpan"
-            android:layout_marginTop="@dimen/padding_default"
-            android:background="@android:drawable/button_onoff_indicator_off"
-            android:textColor="@color/blackTextColor"/>
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+<!--            <Button-->
+<!--                android:id="@+id/btn_cancel"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Cancel"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_marginEnd="@dimen/_4sdp"-->
+<!--                android:layout_marginTop="@dimen/padding_default"-->
+<!--                android:background="@android:drawable/button_onoff_indicator_off"-->
+<!--                android:textColor="@color/blackTextColor"/>-->
+
+            <com.ornach.nobobutton.NoboButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:id="@+id/btn_cancel"
+                android:layout_weight="1"
+                android:layout_marginBottom="20dp"
+                app:nb_text="Cancel"
+                app:nb_borderColor="#FFFFFF"
+                app:nb_borderWidth="2dp"
+                app:nb_backgroundColor="#C9C5C5"
+                app:nb_focusColor="#B83CC3"
+                android:layout_marginEnd="@dimen/_4sdp"
+                app:nb_textColor="#FFF"
+                app:nb_radius="@dimen/_12sdp"/>
+
+            <com.ornach.nobobutton.NoboButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_weight="1"
+                android:id="@+id/btn_simpan"
+                android:layout_marginBottom="20dp"
+                app:nb_text="Simpan"
+                app:nb_borderColor="#FFFFFF"
+                app:nb_borderWidth="2dp"
+                app:nb_backgroundColor="@color/colorPrimary"
+                app:nb_focusColor="#B83CC3"
+                app:nb_textColor="#FFF"
+                android:layout_marginStart="@dimen/_4sdp"
+                app:nb_radius="@dimen/_12sdp"/>
+
+            <!--            <Button-->
+<!--                android:id="@+id/btn_simpan"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_marginStart="@dimen/_4sdp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Simpan"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_marginTop="@dimen/padding_default"-->
+<!--                android:background="@android:drawable/button_onoff_indicator_on"-->
+<!--                android:textColor="#000"/>-->
+        </LinearLayout>
 
     </LinearLayout>
 

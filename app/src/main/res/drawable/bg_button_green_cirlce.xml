@@ -4,29 +4,29 @@
     <item android:state_enabled="true"
         android:state_pressed="true">
         <shape android:shape="oval">
-            <solid android:color="@color/colorGreen2"></solid>
+            <solid android:color="@color/colorAccent"></solid>
         </shape>
     </item>
     <item android:state_enabled="true"
         android:state_focused="true">
         <shape android:shape="oval">
-            <solid android:color="@color/colorGreen2"></solid>
+            <solid android:color="@color/colorAccent"></solid>
         </shape>
     </item>
     <item android:state_enabled="true"
         android:state_selected="true">
         <shape android:shape="oval">
-            <solid android:color="@color/colorGreen2"></solid>
+            <solid android:color="@color/colorAccent"></solid>
         </shape>
     </item>
     <item android:state_enabled="false">
         <shape android:shape="oval">
-            <solid android:color="@color/colorGreen2"></solid>
+            <solid android:color="@color/colorAccent"></solid>
         </shape>
     </item>
     <item>
         <shape android:shape="oval">
-            <solid android:color="@color/colorGreen1"></solid>
+            <solid android:color="@color/colorAccent"></solid>
         </shape>
     </item>
 </selector>

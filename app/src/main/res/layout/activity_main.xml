@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:background="#F3F1F1"
+            android:background="@color/bg"
             app:itemIconTint="@drawable/selected_menu"
             app:itemTextColor="@drawable/selected_menu"
             app:labelVisibilityMode="labeled"

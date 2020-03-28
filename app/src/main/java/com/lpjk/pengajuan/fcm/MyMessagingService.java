@@ -16,11 +16,8 @@ import androidx.core.app.NotificationCompat;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
-
-import org.pindaiaja.pindaiapp.InboxDetailActivity;
-import org.pindaiaja.pindaiapp.InboxListActivity;
-import org.pindaiaja.pindaiapp.R;
-
+import com.lpjk.pengajuan.MainActivity;
+import com.lpjk.pengajuan.R;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -58,25 +55,25 @@ public class MyMessagingService extends FirebaseMessagingService {
         Log.d("JENIS INFORMASI",jenis);
 
         PendingIntent pendingIntent;
-        if(j.equalsIgnoreCase("INFORMASI")){
-            Bundle bundle = new Bundle();
-            bundle.putString("tujuan", String.valueOf(tujuan));
-            bundle.putString("id_surat", String.valueOf(id_surat));
-            Intent intent = new Intent(this, InboxDetailActivity.class);
-            intent.putExtras(bundle);
+//        if(j.equalsIgnoreCase("INFORMASI")){
+//            Bundle bundle = new Bundle();
+//            bundle.putString("tujuan", String.valueOf(tujuan));
+//            bundle.putString("id_surat", String.valueOf(id_surat));
+//            Intent intent = new Intent(this, InboxDetailActivity.class);
+//            intent.putExtras(bundle);
+//            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//            pendingIntent = PendingIntent.getActivity(this, 0, intent,
+//                    PendingIntent.FLAG_ONE_SHOT);
+//        }else{
+            Intent intent = new Intent(this, MainActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             pendingIntent = PendingIntent.getActivity(this, 0, intent,
                     PendingIntent.FLAG_ONE_SHOT);
-        }else{
-            Intent intent = new Intent(this, InboxListActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            pendingIntent = PendingIntent.getActivity(this, 0, intent,
-                    PendingIntent.FLAG_ONE_SHOT);
-        }
+//        }
         Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         NotificationCompat.Builder notificationBuilder =
                 new NotificationCompat.Builder(this, channelId)
-                        .setSmallIcon(R.drawable.logo_pindai)
+                        .setSmallIcon(R.drawable.lpjk)
                         .setContentTitle(titleBody)
                         .setContentText(messageBody)
                         .setAutoCancel(true)

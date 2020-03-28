@@ -1,14 +1,320 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".akun.AkunFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <!-- Appbar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-</FrameLayout>
+        <!-- Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:titleTextColor="@color/colorPrimary"
+            android:background="@color/bg" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/habib_ali"
+                        android:scaleType="centerCrop"
+                        android:id="@+id/iv_profile_main"/>
+
+                    <RelativeLayout
+                        android:layout_width="95dp"
+                        android:layout_height="95dp"
+                        android:layout_centerInParent="true">
+
+                        <ImageView
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:padding="@dimen/padding_mid"
+                            android:id="@+id/iv_image"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_camera"
+                            android:scaleType="fitCenter"
+                            android:background="@drawable/circle"/>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/padding_big"
+                    android:paddingRight="@dimen/padding_big">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="@dimen/icon_size2"
+                            android:layout_height="@dimen/icon_size2"
+                            android:src="@drawable/ic_name"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="@dimen/padding_mid"
+                            android:id="@+id/ic_nama"/>
+
+                        <ImageView
+                            android:layout_width="@dimen/icon_size1"
+                            android:layout_height="@dimen/icon_size1"
+                            android:src="@drawable/ic_mode_edit_black_24dp"
+                            android:scaleType="fitCenter"
+                            android:id="@+id/iv_profile"
+                            android:background="?attr/selectableItemBackground"
+                            android:layout_marginLeft="@dimen/padding_default"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_toLeftOf="@id/iv_profile"
+                            android:layout_toRightOf="@id/ic_nama"
+                            android:layout_marginLeft="@dimen/padding_default">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="#000"
+                                android:text="Nama"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/text_big" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="#000"
+                                android:text="Nama"
+                                android:id="@+id/tv_nama"/>
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_medium">
+
+                        <ImageView
+                            android:layout_width="@dimen/icon_size2"
+                            android:layout_height="@dimen/icon_size2"
+                            android:src="@drawable/ic_mobile"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="@dimen/padding_mid"
+                            android:id="@+id/ic_kontak"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_toRightOf="@id/ic_kontak"
+                            android:layout_marginLeft="@dimen/padding_default">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="#000"
+                                android:text="Kontak"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/text_big" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="#000"
+                                android:text="Kontak"
+                                android:id="@+id/tv_kontak"/>
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_medium">
+
+                        <ImageView
+                            android:layout_width="@dimen/icon_size2"
+                            android:layout_height="@dimen/icon_size2"
+                            android:src="@drawable/ic_address"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="@dimen/padding_mid"
+                            android:id="@+id/ic_alamat"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_toRightOf="@id/ic_alamat"
+                            android:layout_marginLeft="@dimen/padding_default">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="#000"
+                                android:text="Alamat"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/text_big" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="#000"
+                                android:text="Alamat"
+                                android:id="@+id/tv_alamat"/>
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_medium">
+
+                        <ImageView
+                            android:layout_width="@dimen/icon_size2"
+                            android:layout_height="@dimen/icon_size2"
+                            android:src="@drawable/ic_pass"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="@dimen/padding_mid"
+                            android:id="@+id/ic_pass"/>
+
+                        <ImageView
+                            android:layout_width="@dimen/icon_size1"
+                            android:layout_height="@dimen/icon_size1"
+                            android:src="@drawable/ic_mode_edit_black_24dp"
+                            android:scaleType="fitCenter"
+                            android:id="@+id/iv_pass"
+                            android:layout_marginLeft="@dimen/padding_default"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_toLeftOf="@id/iv_pass"
+                            android:layout_toRightOf="@id/ic_pass"
+                            android:layout_marginLeft="@dimen/padding_default">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="#000"
+                                android:text="Password"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/text_big" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="#000"
+                                android:text="********"
+                                android:id="@+id/tv_password"/>
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_custom"
+                    android:layout_marginTop="@dimen/padding_default"
+                    android:layout_marginBottom="@dimen/padding_default"
+                    android:background="#B9FFFFFF"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/padding_big"
+                    android:paddingRight="@dimen/padding_big">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rl_logout"
+                        android:layout_marginTop="@dimen/padding_default">
+
+                        <ImageView
+                            android:layout_width="@dimen/icon_size2"
+                            android:layout_height="@dimen/icon_size2"
+                            android:src="@drawable/ic_exit"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="@dimen/padding_mid"
+                            android:id="@+id/ic_logout"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_toRightOf="@id/ic_logout"
+                            android:layout_marginLeft="@dimen/padding_default">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="#000"
+                                android:text="Logout"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/text_big" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_custom"
+                    android:layout_marginTop="@dimen/padding_big"
+                    android:layout_marginBottom="@dimen/padding_default"
+                    android:background="#B9FFFFFF"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

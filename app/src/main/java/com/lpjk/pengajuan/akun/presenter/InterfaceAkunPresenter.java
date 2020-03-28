@@ -1,4 +1,7 @@
 package com.lpjk.pengajuan.akun.presenter;
 
-public class InterfaceAkun {
+public interface InterfaceAkunPresenter {
+    void editProfil();
+    void editPassword();
+    void getProfil();
 }

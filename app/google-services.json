@@ -1,0 +1,159 @@
+{
+  "project_info": {
+    "project_number": "953251641870",
+    "firebase_url": "https://myfirebasecloudmassaging.firebaseio.com",
+    "project_id": "myfirebasecloudmassaging",
+    "storage_bucket": "myfirebasecloudmassaging.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:953251641870:android:5334f6599fd05834",
+        "android_client_info": {
+          "package_name": "com.dicoding.picodiploma.myfirebasecloudmessaging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "953251641870-s6rose97ds644ojen49o1hcfn9t7qtbe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dicoding.picodiploma.myfirebasecloudmessaging",
+            "certificate_hash": "fe2c22acb2abcc715d9c9da0517934d7f126a929"
+          }
+        },
+        {
+          "client_id": "953251641870-4gbnhlu8nodbd723egii3049ovvrchgt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLgKFMkad1O_POR98DqNeNoMIY9qfs2Ck"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "953251641870-4gbnhlu8nodbd723egii3049ovvrchgt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:953251641870:android:6338f0708728a6e3",
+        "android_client_info": {
+          "package_name": "com.gmedia.myfirebasecloudmessaging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "953251641870-ff3vodi725fdn24intd8dolp7llb547q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gmedia.myfirebasecloudmessaging",
+            "certificate_hash": "fe2c22acb2abcc715d9c9da0517934d7f126a929"
+          }
+        },
+        {
+          "client_id": "953251641870-4gbnhlu8nodbd723egii3049ovvrchgt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLgKFMkad1O_POR98DqNeNoMIY9qfs2Ck"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "953251641870-4gbnhlu8nodbd723egii3049ovvrchgt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:953251641870:android:f9e2cc4219e3d7a8211a5f",
+        "android_client_info": {
+          "package_name": "com.lpjk.pengajuan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "953251641870-lq4c841594i8c4pg122vh9gqr8kgsu25.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lpjk.pengajuan",
+            "certificate_hash": "5f42eb4e8633c65fec9aeac6883abac45b55f907"
+          }
+        },
+        {
+          "client_id": "953251641870-4gbnhlu8nodbd723egii3049ovvrchgt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLgKFMkad1O_POR98DqNeNoMIY9qfs2Ck"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "953251641870-4gbnhlu8nodbd723egii3049ovvrchgt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:953251641870:android:e8f96bccf9041fdf",
+        "android_client_info": {
+          "package_name": "com.rohim.ecommerceapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "953251641870-1bhvao55osmj8ker2o24seikr8daulub.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rohim.ecommerceapp",
+            "certificate_hash": "fe2c22acb2abcc715d9c9da0517934d7f126a929"
+          }
+        },
+        {
+          "client_id": "953251641870-4gbnhlu8nodbd723egii3049ovvrchgt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLgKFMkad1O_POR98DqNeNoMIY9qfs2Ck"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "953251641870-4gbnhlu8nodbd723egii3049ovvrchgt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

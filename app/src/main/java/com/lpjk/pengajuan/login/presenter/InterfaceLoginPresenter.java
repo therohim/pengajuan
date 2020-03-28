@@ -1,7 +1,5 @@
-package org.pindaiaja.pindaiapp.login.presenter;
+package com.lpjk.pengajuan.login.presenter;
 
 public interface InterfaceLoginPresenter {
-    void onLogin(String email, String password) ;
-    void setProgressBarVisiblity(int visiblity);
-    void footerLogin();
+    void onLogin(String username, String password);
 }

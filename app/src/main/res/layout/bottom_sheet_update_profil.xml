@@ -18,12 +18,12 @@
             android:layout_height="wrap_content"
             android:textSize="@dimen/_12sdp"
             android:textStyle="bold"
-            android:text="Password Lama"/>
+            android:text="Nama"/>
         <androidx.appcompat.widget.AppCompatEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/edt_pass_lama"
-            android:inputType="textPassword"
+            android:id="@+id/edt_nama"
+            android:inputType="text"
             style="@style/Widget.AppCompat.EditText"
             android:textColor="#000"/>
     </LinearLayout>
@@ -38,12 +38,52 @@
             android:layout_height="wrap_content"
             android:textSize="@dimen/_12sdp"
             android:textStyle="bold"
-            android:text="Password Baru"/>
+            android:text="Kontak"/>
         <androidx.appcompat.widget.AppCompatEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/edt_pass_baru"
-            android:inputType="textPassword"
+            android:id="@+id/edt_kontak"
+            android:inputType="number"
+            style="@style/Widget.AppCompat.EditText"
+            android:textColor="#000"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            android:text="Alamat"/>
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edt_alamat"
+            android:inputType="textLongMessage"
+            style="@style/Widget.AppCompat.EditText"
+            android:textColor="#000"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            android:text="Email"/>
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edt_email"
+            android:inputType="textEmailAddress"
             style="@style/Widget.AppCompat.EditText"
             android:textColor="#000"/>
     </LinearLayout>

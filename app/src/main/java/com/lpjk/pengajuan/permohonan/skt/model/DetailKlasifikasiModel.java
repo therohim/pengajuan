@@ -1,10 +1,10 @@
-package com.lpjk.pengajuan.permohonan.sbu.model;
+package com.lpjk.pengajuan.permohonan.skt.model;
 
 public class DetailKlasifikasiModel {
     String id,kode_klasifikasi,deskripsi_klasifikasi,deskripsi_lengkap_klasifikasi,kode_sub_klasifikasi,
             deskripsi_sub_klasifikasi,lingkup_pekerjaan_klasifikasi,kode_kualifikasi,total_biaya;
 
-    public DetailKlasifikasiModel(String id,String kode_klasifikasi,String deskripsi_klasifikasi,String deskripsi_lengkap_klasifikasi,String kode_sub_klasifikasi,String deskripsi_sub_klasifikasi,String lingkup_pekerjaan_klasifikasi,String kode_kualifikasi,String total_biaya){
+    public DetailKlasifikasiModel(String id, String kode_klasifikasi, String deskripsi_klasifikasi, String deskripsi_lengkap_klasifikasi, String kode_sub_klasifikasi, String deskripsi_sub_klasifikasi, String lingkup_pekerjaan_klasifikasi, String kode_kualifikasi, String total_biaya){
         this.id =id;
         this.kode_klasifikasi =kode_klasifikasi;
         this.deskripsi_klasifikasi = deskripsi_klasifikasi;

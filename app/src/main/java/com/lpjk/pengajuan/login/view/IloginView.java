@@ -1,4 +1,4 @@
-package org.pindaiaja.pindaiapp.login.view;
+package com.lpjk.pengajuan.login.view;
 
 import android.content.Context;
 
@@ -7,6 +7,6 @@ public interface IloginView {
     void onLoginError(String message);
     void End();
     Context getContext();
-    void onSetProgressBarVisibility(int visibility);
-    void setFooterLogin(String copyright);
+    void showProgress();
+    void dismisProgress();
 }

@@ -26,6 +26,10 @@ public class DetailKlasifikasiAdapter extends RecyclerView.Adapter<DetailKlasifi
     public DetailKlasifikasiAdapter(Activity context, List<DetailKlasifikasiModel> models){
         this.models = models;
         this.context = context;
+
+
+
+        //.BCXWMNGJC
     }
 
     @NonNull
@@ -42,7 +46,7 @@ public class DetailKlasifikasiAdapter extends RecyclerView.Adapter<DetailKlasifi
         holder.tvDeskripsiKlasifikasi.setText(k.getDeskripsi_klasifikasi());
         holder.tvDeskripsiSubKlasifikasi.setText(k.getDeskripsi_sub_klasifikasi());
         holder.tvKodeKualifikasi.setText(k.getKode_kualifikasi());
-        holder.tvBiaya.setText(rupiah(Double.parseDouble(k.getTotal_biaya())));
+//        holder.tvBiaya.setText(rupiah(Double.parseDouble(k.getTotal_biaya())));
     }
 
     @Override
@@ -57,7 +61,7 @@ public class DetailKlasifikasiAdapter extends RecyclerView.Adapter<DetailKlasifi
             tvDeskripsiKlasifikasi = itemView.findViewById(R.id.tv_deskripsi_klasifikasi);
             tvDeskripsiSubKlasifikasi = itemView.findViewById(R.id.tv_deskripsi_sub_klasifikasi);
             tvKodeKualifikasi = itemView.findViewById(R.id.tv_kode_kualifikasi);
-            tvBiaya = itemView.findViewById(R.id.tv_total_biaya);
+//            tvBiaya = itemView.findViewById(R.id.tv_total_biaya);
         }
     }
 }

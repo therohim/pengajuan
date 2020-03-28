@@ -46,4 +46,10 @@ dependencies {
     implementation 'com.cjj.materialrefeshlayout:library:1.3.0'
     // button beautfy
     implementation 'com.ornach.nobobutton:nobobutton:1.6'
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.fxn769:pix:1.4.4'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
 }

@@ -67,19 +67,19 @@
             android:textSize="@dimen/_12sdp"
             android:id="@+id/tv_kode_kualifikasi"/>
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:orientation="vertical">
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Rp 100.000"
-            android:textStyle="bold"
-            android:gravity="right"
-            android:layout_marginTop="@dimen/_2sdp"
-            android:textSize="@dimen/_12sdp"
-            android:id="@+id/tv_total_biaya"/>
-    </LinearLayout>
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="@dimen/_5sdp"-->
+<!--        android:orientation="vertical">-->
+<!--        <androidx.appcompat.widget.AppCompatTextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Rp 100.000"-->
+<!--            android:textStyle="bold"-->
+<!--            android:gravity="right"-->
+<!--            android:layout_marginTop="@dimen/_2sdp"-->
+<!--            android:textSize="@dimen/_12sdp"-->
+<!--            android:id="@+id/tv_total_biaya"/>-->
+<!--    </LinearLayout>-->
 </LinearLayout>

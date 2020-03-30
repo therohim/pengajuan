@@ -19,7 +19,6 @@ import com.lpjk.pengajuan.login.presenter.LoginPresenter;
 import com.lpjk.pengajuan.login.view.IloginView;
 import com.rohim.rohimmodule.RequestQueueService;
 import com.rohim.rohimmodule.UserSession;
-import com.rohim.rohimmodule.toast.ToastBeautify;
 
 public class LoginActivity extends AppCompatActivity implements IloginView {
     EditText edtUsername, edtPassword;

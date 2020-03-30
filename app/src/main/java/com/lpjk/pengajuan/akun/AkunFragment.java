@@ -13,6 +13,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -68,9 +69,14 @@ public class AkunFragment extends Fragment implements InterfaceAkunView {
         view =  inflater.inflate(R.layout.fragment_akun, container, false);
         session = new UserSession(getContext());
         interfaceAkunPresenter = new AkunPresenter(this);
-        interfaceAkunPresenter.getProfil();
         initUi();
         return view;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        interfaceAkunPresenter.getProfil();
     }
 
     private void initUi(){
@@ -126,7 +132,7 @@ public class AkunFragment extends Fragment implements InterfaceAkunView {
                 .setFrontfacing(false)                                               //Front Facing camera on start
                 .setImageQuality(ImageQuality.HIGH)                                  //Image Quality
                 .setScreenOrientation(Options.SCREEN_ORIENTATION_PORTRAIT)           //Orientaion
-                .setPath("/absensigmedia/images");                                             //Custom Path For Image Storage
+                .setPath("/lpjk_pengajuan/images");                                  //Custom Path For Image Storage
 
         Pix.start((MainActivity) getContext(), options);
     }
@@ -134,17 +140,6 @@ public class AkunFragment extends Fragment implements InterfaceAkunView {
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
-        if (resultCode == Activity.RESULT_OK && requestCode == 1001) {
-            ArrayList<String> returnValue = data.getStringArrayListExtra(Pix.IMAGE_RESULTS);
-
-            if (returnValue.size() > 0) {
-
-                File f = new File(returnValue.get(0));
-                Bitmap b = new BitmapDrawable(getContext().getResources(), f.getAbsolutePath()).getBitmap();
-                interfaceAkunPresenter.saveFotoProfil(ImageUtils.convert(b));
-            }
-        }
     }
 
     @Override
@@ -187,6 +182,7 @@ public class AkunFragment extends Fragment implements InterfaceAkunView {
             if(!jsonObject.getString("foto").equals("")){
                 Picasso.get()
                         .load(jsonObject.getString("foto"))
+                        .placeholder(R.drawable.user_red2)
                         .into(ivProfilMain);
             }
         } catch (JSONException e) {

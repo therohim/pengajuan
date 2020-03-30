@@ -1,6 +1,7 @@
 package com.lpjk.pengajuan.akun.presenter;
 
 import android.content.Intent;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -233,6 +234,7 @@ public class AkunPresenter implements InterfaceAkunPresenter {
             String message =metadata.getString("message");
             if(status == 200){
                 JSONObject response = new JSONObject(data.optString("response"));
+                Log.d(">>>>>",String.valueOf(response));
                 interfaceAkunView.getDataProfil(response);
             }else{
                 RequestQueueService.showAlertError(message,interfaceAkunView.getContext());
@@ -242,58 +244,60 @@ public class AkunPresenter implements InterfaceAkunPresenter {
         @Override
         public void onFetchFailure(String msg) {
             RequestQueueService.cancelProgressDialog();
-            RequestQueueService.showAlertError(msg,interfaceAkunView.getContext());
+            RequestQueueService.showAlertError("Terjadi kesalahan",interfaceAkunView.getContext());
         }
 
         @Override
         public void onFetchStart() {
-            RequestQueueService.showProgressDialog(interfaceAkunView.getContext());
+            RequestQueueService.showAlertError("Terjadi kesalahan",interfaceAkunView.getContext());
+            RequestQueueService.cancelProgressDialog();
         }
     };
 
-    @Override
-    public void saveFotoProfil(String foto) {
-        session = new UserSession(interfaceAkunView.getContext());
-        try{
-            VolleyRequest postapiRequest=new VolleyRequest();
-            JSONObject jsonObject = new JSONObject();
-            try {
-                jsonObject.put("id", session.getSpUserId());
-                jsonObject.put("foto_profil",foto);
-            }catch (Exception e){
-                e.printStackTrace();
-            }
-            postapiRequest.request(interfaceAkunView.getContext(),fetchUpdateFotoProfil,jsonObject, ServerUrl.url_update_foto_profil,"POST");
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-    }
-
-    FetchDataListener fetchUpdateFotoProfil = new FetchDataListener() {
-        @Override
-        public void onFetchComplete(JSONObject data) throws JSONException {
-            RequestQueueService.cancelProgressDialog();
-            JSONObject metadata= new JSONObject(data.optString("metadata"));
-            int status = metadata.getInt("status");
-            String message =metadata.getString("message");
-            if(status == 200){
-                JSONObject response = new JSONObject(data.optString("response"));
-                interfaceAkunView.getDataProfil(response);
-            }else{
-                RequestQueueService.showAlertError(message,interfaceAkunView.getContext());
-            }
-        }
-
-        @Override
-        public void onFetchFailure(String msg) {
-            RequestQueueService.cancelProgressDialog();
-            RequestQueueService.showAlertError(msg,interfaceAkunView.getContext());
-        }
-
-        @Override
-        public void onFetchStart() {
-            RequestQueueService.showProgressDialog(interfaceAkunView.getContext());
-        }
-    };
+//    @Override
+//    public void saveFotoProfil(String foto) {
+//        session = new UserSession(interfaceAkunView.getContext());
+//        try{
+//            VolleyRequest postapiRequest=new VolleyRequest();
+//            JSONObject jsonObject = new JSONObject();
+//            try {
+//                jsonObject.put("id", session.getSpUserId());
+//                jsonObject.put("foto_profil",foto);
+//            }catch (Exception e){
+//                e.printStackTrace();
+//            }
+//            postapiRequest.request(interfaceAkunView.getContext(),fetchUpdateFotoProfil,jsonObject, ServerUrl.url_update_foto_profil,"POST");
+//        }catch (Exception e){
+//            e.printStackTrace();
+//        }
+//    }
+//
+//    FetchDataListener fetchUpdateFotoProfil = new FetchDataListener() {
+//        @Override
+//        public void onFetchComplete(JSONObject data) throws JSONException {
+//            RequestQueueService.cancelProgressDialog();
+//            Log.d(">>>>",String.valueOf(data));
+//            JSONObject metadata= new JSONObject(data.optString("metadata"));
+//            int status = metadata.getInt("status");
+//            String message =metadata.getString("message");
+//            if(status == 200){
+//                JSONObject response = new JSONObject(data.optString("response"));
+//                interfaceAkunView.getDataProfil(response);
+//            }else{
+//                RequestQueueService.showAlertError(message,interfaceAkunView.getContext());
+//            }
+//        }
+//
+//        @Override
+//        public void onFetchFailure(String msg) {
+//            RequestQueueService.cancelProgressDialog();
+//            RequestQueueService.showAlertError(msg,interfaceAkunView.getContext());
+//        }
+//
+//        @Override
+//        public void onFetchStart() {
+//            RequestQueueService.showProgressDialog(interfaceAkunView.getContext());
+//        }
+//    };
 
 }

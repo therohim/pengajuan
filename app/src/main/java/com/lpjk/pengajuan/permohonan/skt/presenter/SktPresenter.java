@@ -67,15 +67,16 @@ public class SktPresenter implements ISktPresenter {
                     ));
                     view.onGetResultSkt(model);
                 }
-            }else{
-                RequestQueueService.showAlertError(message,view.getContext());
             }
+//            else{
+//                RequestQueueService.showAlertError(message,view.getContext());
+//            }
         }
 
         @Override
         public void onFetchFailure(String msg) {
             RequestQueueService.cancelProgressDialog();
-            RequestQueueService.showAlertError(msg,view.getContext());
+            RequestQueueService.showAlertError("terjadi kesalahan data",view.getContext());
         }
 
         @Override

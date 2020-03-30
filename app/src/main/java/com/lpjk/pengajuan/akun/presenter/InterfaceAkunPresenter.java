@@ -4,5 +4,5 @@ public interface InterfaceAkunPresenter {
     void editProfil();
     void editPassword();
     void getProfil();
-    void saveFotoProfil(String foto);
+//    void saveFotoProfil(String foto);
 }

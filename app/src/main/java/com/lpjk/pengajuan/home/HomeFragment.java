@@ -12,12 +12,14 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.lpjk.pengajuan.R;
 import com.lpjk.pengajuan.home.presenter.HomePresenter;
 import com.lpjk.pengajuan.home.presenter.InterfaceHomePresenter;
 import com.lpjk.pengajuan.home.view.InterfaceHomeView;
+import com.squareup.picasso.Picasso;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -30,6 +32,7 @@ public class HomeFragment extends Fragment implements InterfaceHomeView {
     View view;
     TextView tvSbu, tvSka, tvSkt, tvNama, tvNIK;
     InterfaceHomePresenter presenter;
+    ImageView imgUser;
 //    Toolbar toolbar;
 
     public HomeFragment() {
@@ -53,6 +56,7 @@ public class HomeFragment extends Fragment implements InterfaceHomeView {
         tvSkt = view.findViewById(R.id.tv_skt);
         tvNama = view.findViewById(R.id.tv_nama);
         tvNIK = view.findViewById(R.id.tv_nik);
+        imgUser = view.findViewById(R.id.user_photo);
     }
 
     @Override
@@ -79,9 +83,15 @@ public class HomeFragment extends Fragment implements InterfaceHomeView {
     }
 
     @Override
-    public void onProfil(String nama, String nik) {
+    public void onProfil(String nama, String nik, String foto) {
         tvNIK.setText(nik);
         tvNama.setText(nama);
+        if(!foto.equals("")){
+            Picasso.get()
+                    .load(foto)
+                    .placeholder(R.drawable.user_red2)
+                    .into(imgUser);
+        }
     }
 
     @Override

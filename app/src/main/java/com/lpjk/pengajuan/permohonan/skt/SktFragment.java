@@ -125,11 +125,4 @@ public class SktFragment extends Fragment implements SktView {
         rvSkt.setHasFixedSize(true);
     }
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-//        if(requestCode == 201){
-//            presenter.getSkt();
-//        }
-    }
 }

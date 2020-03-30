@@ -12,7 +12,6 @@ import com.rohim.rohimmodule.FetchDataListener;
 import com.rohim.rohimmodule.RequestQueueService;
 import com.rohim.rohimmodule.UserSession;
 import com.rohim.rohimmodule.VolleyRequest;
-import com.rohim.rohimmodule.toast.ToastBeautify;
 
 import org.json.JSONArray;
 import org.json.JSONException;

@@ -84,7 +84,8 @@ public class HomePresenter implements InterfaceHomePresenter {
                 Log.d(">>>>>>",String.valueOf(response));
                 String nama = response.getString("nama");
                 String nik = response.getString("nik");
-                homeView.onProfil(nama,nik);
+                String foto = response.getString("foto");
+                homeView.onProfil(nama,nik, foto);
             }else{
                 RequestQueueService.showAlertError(message,homeView.getContext());
             }

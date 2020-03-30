@@ -7,7 +7,7 @@ import org.json.JSONObject;
 
 public interface InterfaceHomeView {
     void onTotal(JSONObject jsonObject);
-    void onProfil(String nama, String nik);
+    void onProfil(String nama, String nik, String foto);
     Activity getContext();
     void End();
 }

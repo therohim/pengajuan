@@ -66,9 +66,10 @@ public class SbuPresenter implements ISbuPresenter {
                     ));
                     sbuView.onGetResultSbu(model);
                 }
-            }else{
-                RequestQueueService.showAlertError(message,sbuView.getContext());
             }
+//            else{
+//                RequestQueueService.showAlertError(message,sbuView.getContext());
+//            }
         }
 
         @Override
